@@ -56,102 +56,47 @@
 			<div class="fh5co-narrow-content">
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Galeria de Imagens</h2>
 				<div class="row row-bottom-padded-md">
+
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-1.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Illustration</span>
-							</div>
+						<a href="#" class="work image-popup" data-img="images/golfeaereo.jpeg" style="background-image: url(images/golfeaereo.jpeg);">
+								<div class="desc">
+										<h3>Campo de Golf</h3>
+								</div>
 						</a>
 					</div>
+
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-2.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Brading</span>
-							</div>
+						<a href="#" class="work image-popup" data-img="images/piscinaaerea.jpg" style="background-image: url(images/piscinaaerea.jpg);">
+								<div class="desc">
+										<h3>Piscina</h3>
+								</div>
 						</a>
 					</div>
+
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-3.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Illustration</span>
-							</div>
+						<a href="#" class="work image-popup" data-img="images/ruasnoite.jpg" style="background-image: url(images/ruasnoite.jpg);">
+								<div class="desc">
+										<h3>Ruas</h3>
+								</div>
 						</a>
 					</div>
+
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-4.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Illustration</span>
-							</div>
+						<a href="#" class="work image-popup" data-img="images/golfeaereo.jpeg" style="background-image: url(images/golfeaereo.jpeg);">
+								<div class="desc">
+										<h3>Campo de Golf</h3>
+								</div>
 						</a>
 					</div>
+
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-5.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Brading</span>
-							</div>
+						<a href="#" class="work image-popup" data-img="images/golfeaereo.jpeg" style="background-image: url(images/golfeaereo.jpeg);">
+								<div class="desc">
+										<h3>Campo de Golf</h3>
+								</div>
 						</a>
 					</div>
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-6.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Illustration</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-1.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Illustration</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-2.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Brading</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-1.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Illustration</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-2.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Brading</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-3.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Illustration</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url(images/img-4.jpg);">
-							<div class="desc">
-								<h3>Project Name</h3>
-								<span>Illustration</span>
-							</div>
-						</a>
-					</div>
+					
 				</div>
 			</div>
 		
@@ -172,6 +117,14 @@
 		</div>
 	</div>
 
+	<div id="imagemModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="" alt="Imagem no Modal" />
+        <a href="#" class="back-button" id="backButton">← Voltar para Galeria</a>
+    </div>
+</div>
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -183,9 +136,44 @@
 	<!-- Flexslider -->
 	<script src="js/jquery.flexslider-min.js"></script>
 	
-	
+	<script>
+    // Obter os elementos
+    const modal = document.getElementById("imagemModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".close");
+    const backBtn = document.getElementById("backButton");
+
+    // Abrir o modal ao clicar na imagem
+    document.querySelectorAll('.image-popup').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const imgSrc = this.getAttribute('data-img');
+            modal.style.display = "flex";
+            modalImg.src = imgSrc;
+        });
+    });
+
+    // Fechar o modal ao clicar no 'X'
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+
+    // Fechar o modal ao clicar no botão 'Voltar'
+    backBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.style.display = "none";
+    });
+
+    // Fechar o modal ao clicar fora da área da imagem
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+
 
 	</body>
 </html>

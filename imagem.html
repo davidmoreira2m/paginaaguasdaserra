@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualização da Imagem</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #000;
+      }
+      img {
+        max-width: 90%;
+        max-height: 80vh;
+        border-radius: 10px;
+      }
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        color: black;
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .back-button:hover {
+        background: rgba(255, 255, 255, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="galeria.html" class="back-button">← Voltar</a>
+    <img id="imagem" src="" alt="Imagem selecionada" />
+
+    <script>
+      // Capturar a URL da imagem passada via parâmetro
+      const urlParams = new URLSearchParams(window.location.search);
+      const imgSrc = urlParams.get("img");
+
+      // Definir a imagem se houver parâmetro
+      if (imgSrc) {
+        document.getElementById("imagem").src = imgSrc;
+      } else {
+        document.getElementById("imagem").alt = "Imagem não encontrada!";
+      }
+    </script>
+  </body>
+</html>
