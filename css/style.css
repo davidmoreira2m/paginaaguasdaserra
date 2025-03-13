@@ -67,6 +67,10 @@ body {
   display: none; /* Esconde o texto */
 }
 
+.js-fh5co-nav-toggle {
+  filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 10));
+}
+
 .saiba-mais {
   color: blue;
   text-decoration: underline;
