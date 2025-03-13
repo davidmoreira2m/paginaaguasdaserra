@@ -1,0 +1,346 @@
+body {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+  background-color: #ffffff;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+#container {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 100%;
+  font-size: 14px;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: rgb(60, 66, 87);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  display: inline-block;
+  min-height: 28px;
+  transition: background-color 0.24s, box-shadow 0.24s;
+}
+
+button:hover {
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+    rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px,
+    rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 3px 9px 0px,
+    rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+}
+
+label {
+  text-align: left;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.conteudo {
+  max-width: 100%;
+  margin: auto;
+}
+
+.container {
+  position: relative;
+  background: white;
+  padding: 10px 100px;
+  max-width: 600px;
+  margin: auto;
+}
+.busca-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 90px;
+  max-width: 100%;
+}
+
+#map {
+  height: 490px;
+  max-width: 600px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.label-qrcode {
+  font-size: 15px;
+}
+
+#print-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Ajuste do fundo da caixa de informações do mapa*/
+.leaflet-routing-container {
+  background-color: transparent !important; /* Deixa o fundo transparente */
+  color: #000 !important; /* Define a cor do texto como preto */
+  box-shadow: none; /* Remove qualquer sombra */
+  font-size: 12px;
+  width: 210px !important;
+  max-height: 400px !important;
+}
+
+/* Personalizando os marcadores do mapa (pinos de partida e chegada) */
+.leaflet-routing-icon {
+  background-color: transparent !important;
+  border: none;
+}
+
+.lotesquintas-container {
+  margin-bottom: 25px;
+}
+
+#dropdown-container {
+  width: 100%;
+}
+
+#areascomuns-dropdown {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+}
+
+#areascomuns-dropdown option:hover {
+  background-color: #313131; /* Cor de fundo ao passar o mouse */
+  color: white; /* Cor do texto */
+}
+
+.input-group {
+  display: flex;
+  gap: 6px;
+  position: relative;
+}
+
+.erro {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.qrcode {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Botões estilizados */
+.btn {
+  display: block;
+  text-decoration: none;
+  padding: 8px;
+  margin: 10px auto;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.btn.maps {
+  margin-top: 20px;
+  background: #4285f4;
+  color: white;
+  max-width: 200px;
+}
+
+.btn.maps:hover {
+  background: #357ae8;
+}
+
+.btn.waze {
+  margin-top: 20px;
+  background: #4285f4;
+  color: white;
+  max-width: 200px;
+}
+
+.btn.waze:hover {
+  background: #357ae8;
+}
+
+.hidden {
+  display: none;
+}
+
+.sugestoes-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 10;
+  margin-top: 1px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.sugestoes-popup ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sugestoes-popup li {
+  padding: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sugestoes-popup li:hover {
+  background-color: #f0f0f0;
+}
+
+.print-block {
+  display: none;
+}
+
+@media print {
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    padding: 0px;
+    width: 100%; /* Ajuste conforme necessário */
+    max-width: 800px;
+    text-align: center;
+  }
+
+  #map {
+    height: 490px;
+    width: 600px;
+  }
+
+  #print-btn,
+  #googleMapsBtn,
+  #wazeBtn,
+  .label-qrcode {
+    display: none;
+  }
+  .busca-container {
+    display: none;
+  }
+  .print-block {
+    display: block;
+  }
+  .menu,
+  #fh5co-aside {
+    display: none !important;
+  }
+
+  #fh5co-main {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Media Queries para Responsividade */
+/* Para telas com largura máxima de 768px (tablets e celulares em orientação paisagem) */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  .container {
+    max-width: 700px; /* utiliza a maior parte da tela */
+    padding: 15px;
+  }
+
+  button,
+  input {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .busca-container {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .links-container {
+    display: block;
+  }
+  .links-holder {
+    margin-top: 50px;
+  }
+  #print-btn {
+    display: none;
+  }
+
+  #map {
+    display: none;
+  }
+}
+
+/* Para telas com largura máxima de 480px (celulares) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .links-holder {
+    margin-top: 40px;
+  }
+
+  @media screen and (max-width: 380px) {
+    .input-group {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}
