@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -41,10 +40,10 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="areas.html">Áreas</a></li>
-					<li class="fh5co-active"><a href="galeria.html">Galeria</a></li>
+					<li><a href="galeria.html">Galeria</a></li>
 					<li><a href="sobre.html">Sobre</a></li>
 					<li><a href="contato.html">Contato</a></li>
-					<li><a href="revistas.html">Revistas</a></li>
+					<li class="fh5co-active"><a href="revistas.html">Revistas</a></li>
 				</ul>
 			</nav>
 
@@ -57,51 +56,18 @@
 
 		<div id="fh5co-main">
 			<div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Galeria de Imagens</h2>
 				<div class="row row-bottom-padded-md">
 
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" data-img="images/golfeaereo.jpeg" style="background-image: url(images/golfeaereo.jpeg);">
-								<div class="desc">
-										<h3>Campo de Golf</h3>
-								</div>
-						</a>
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+						<h2 class="fh5co-heading">Revistas</h2>
+						<p>teste</p>
 					</div>
-
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" data-img="images/piscinaaerea.jpg" style="background-image: url(images/piscinaaerea.jpg);">
-								<div class="desc">
-										<h3>Piscina</h3>
-								</div>
-						</a>
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+						<p>teste</p>
 					</div>
-
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" data-img="images/ruasnoite.jpg" style="background-image: url(images/ruasnoite.jpg);">
-								<div class="desc">
-										<h3>Ruas</h3>
-								</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" data-img="images/golfeaereo.jpeg" style="background-image: url(images/golfeaereo.jpeg);">
-								<div class="desc">
-										<h3>Campo de Golf</h3>
-								</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" data-img="images/golfeaereo.jpeg" style="background-image: url(images/golfeaereo.jpeg);">
-								<div class="desc">
-										<h3>Campo de Golf</h3>
-								</div>
-						</a>
-					</div>
-					
 				</div>
 			</div>
+
 		
 			<div class="fh5co-narrow-content">
 				<div class="row">
@@ -120,14 +86,6 @@
 		</div>
 	</div>
 
-	<div id="imagemModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <img id="modalImage" src="" alt="Imagem no Modal" />
-        <a href="#" class="back-button" id="backButton">← Voltar para a galeria</a>
-    </div>
-</div>
-
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -139,52 +97,9 @@
 	<!-- Flexslider -->
 	<script src="js/jquery.flexslider-min.js"></script>
 	
-	<script>
-    // Obter os elementos
-    const modal = document.getElementById("imagemModal");
-    const modalImg = document.getElementById("modalImage");
-    const closeBtn = document.querySelector(".close");
-    const backBtn = document.getElementById("backButton");
-
-    // Abrir o modal ao clicar na imagem
-    document.querySelectorAll('.image-popup').forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            const imgSrc = this.getAttribute('data-img');
-            modal.style.display = "flex";
-            modalImg.src = imgSrc;
-        });
-    });
-
-    // Fechar o modal ao clicar no 'X'
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = "none";
-    });
-
-    // Fechar o modal ao clicar no botão 'Voltar'
-    backBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.style.display = "none";
-    });
-
-    // Fechar o modal ao clicar fora da área da imagem
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-
-	// Fechar o modal ao pressionar a tecla Esc
-		document.addEventListener('keydown', (e) => {
-			if (e.key === "Escape") {
-					modal.style.display = "none";
-   	  }
-});
-
-</script>
+	
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
-
 
 	</body>
 </html>

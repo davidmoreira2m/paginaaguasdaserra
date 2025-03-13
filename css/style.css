@@ -63,6 +63,22 @@ body {
   cursor: pointer;
 }
 
+.desc p {
+  display: none; /* Esconde o texto */
+}
+
+.saiba-mais {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer; /* Adiciona o efeito de clique */
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.texto-desc-areas {
+  font-size: 12px;
+}
+
 .back-button {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1px;
