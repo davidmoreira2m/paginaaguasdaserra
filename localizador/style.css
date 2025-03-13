@@ -14,7 +14,10 @@ body {
 #container {
   max-width: 800px;
   margin: auto;
-  padding-top: 10px;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 input {
@@ -243,8 +246,8 @@ label {
     align-items: center;
   }
 
-  .container {
-    padding: 0px;
+  #container {
+    padding: 0px 60px;
     width: 100%; /* Ajuste conforme necessário */
     max-width: 800px;
     text-align: center;
